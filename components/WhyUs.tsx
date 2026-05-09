@@ -21,7 +21,7 @@ const benefits = [
       <section id="why-us" className="bg-zinc-950 py-24 px-6">
         <div className="max-w-6xl mx-auto">
   
-          <div className="text-center mb-16">
+          <div className="whyus-title text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
               Why PureForm?
             </h2>
@@ -32,7 +32,7 @@ const benefits = [
   
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit) => (
-              <div key={benefit.title} className="text-center px-4">
+              <div key={benefit.title} className="benefit-card text-center px-4">
                 <div className="text-4xl mb-6">{benefit.icon}</div>
                 <h3 className="text-white text-xl font-semibold mb-3">
                   {benefit.title}

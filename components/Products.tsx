@@ -27,7 +27,7 @@ const products = [
       <section id="products" className="bg-black py-24 px-6">
         <div className="max-w-6xl mx-auto">
   
-          <div className="text-center mb-16">
+          <div className="products-title text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
               Our Products
             </h2>
@@ -38,7 +38,7 @@ const products = [
   
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {products.map((product) => (
-              <div key={product.name} className="bg-zinc-900 border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:border-white/20 transition-colors">
+              <div key={product.name} className="product-card bg-zinc-900 border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:border-white/20 transition-colors">
   
                 <div>
                   <div className="flex items-center justify-between mb-6">

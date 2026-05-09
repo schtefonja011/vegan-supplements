@@ -18,7 +18,7 @@ const testimonials = [
       <section id="testimonials" className="bg-black py-24 px-6">
         <div className="max-w-6xl mx-auto">
   
-          <div className="text-center mb-16">
+          <div className="testimonials-title text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
               Real People. Real Results.
             </h2>
@@ -29,7 +29,7 @@ const testimonials = [
   
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {testimonials.map((t) => (
-              <div key={t.name} className="bg-zinc-900 border border-white/10 rounded-2xl p-8">
+              <div key={t.name} className="testimonial-card bg-zinc-900 border border-white/10 rounded-2xl p-8">
                 <p className="text-zinc-300 text-base leading-relaxed mb-8">
                   "{t.quote}"
                 </p>
