@@ -29,5 +29,13 @@ export const productSchema = {
         title: 'Tag',
         type: 'string',
       },
+      {
+        name: 'image',
+        title: 'Product Image',
+        type: 'image',
+        options: {
+          hotspot: true,
+        },
+      },
     ],
   }

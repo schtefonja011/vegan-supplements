@@ -1,4 +1,6 @@
-import { getProducts } from '@/lib/sanity'
+
+import { getProducts, urlFor } from '@/lib/sanity'
+import Image from 'next/image'
 
 type Product = {
   name: string
@@ -6,6 +8,7 @@ type Product = {
   description: string
   price: string
   tag: string
+  image: any
 }
 
 export default async function Products() {
@@ -29,6 +32,18 @@ export default async function Products() {
             <div key={product.name} className="product-card bg-zinc-900 border border-white/10 rounded-2xl p-8 flex flex-col justify-between hover:border-white/20 transition-colors">
 
               <div>
+                {/* Product Image */}
+                {product.image && (
+                  <div className="relative w-full h-48 mb-6 rounded-xl overflow-hidden">
+                    <Image
+                      src={urlFor(product.image).width(400).height(400).url()}
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+
                 <div className="flex items-center justify-between mb-6">
                   <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
                     <span className="text-xl">🌱</span>
