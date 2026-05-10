@@ -15,14 +15,18 @@ export function urlFor(source: any) {
 }
 
 export async function getProducts() {
-  return client.fetch(`
-    *[_type == "product"] {
+  return client.fetch(
+    `*[_type == "product"] {
       name,
       type,
       description,
       price,
       tag,
       image
+    }`,
+    {},
+    {
+      next: { revalidate: 60 }
     }
-  `)
+  )
 }
