@@ -30,3 +30,23 @@ export async function getProducts() {
     }
   )
 }
+
+export async function getHero() {
+  return client.fetch(
+    `*[_type == "hero"][0] {
+      badge,
+      headline,
+      subheadline,
+      description,
+      primaryButtonText,
+      secondaryButtonText,
+      proofText1,
+      proofText2,
+      proofText3
+    }`,
+    {},
+    {
+      next: { revalidate: 60 }
+    }
+  )
+}
