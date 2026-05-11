@@ -9,6 +9,8 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@formspark/use-formspark": "^1.0.0",
+    "@marsidev/react-turnstile": "^1.5.2",
     "@sanity/image-url": "^2.1.1",
     "@sanity/vision": "^5.24.0",
     "gsap": "^3.15.0",

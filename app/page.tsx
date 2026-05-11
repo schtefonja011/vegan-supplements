@@ -5,6 +5,7 @@ import Hero from "@/components/Hero";
 import Products from "@/components/Products";
 import WhyUs from "@/components/WhyUs";
 import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AnimationProvider from "@/components/AnimationProvider";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <Products />
       <WhyUs />
       <Testimonials />
+      <Contact />
       <Footer />
     </main>
   );
